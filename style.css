@@ -1,0 +1,51 @@
+/*
+Theme Name:     Astra Child
+Theme URI:      
+Description:    Astra child theme.
+Author:         Niccolò Perazza
+Author URI:     
+Template:       astra
+Version:        0.1.0
+*/
+
+.ast-container {
+    flex-direction: column;
+}
+
+
+.hero {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 400px;
+    align-items: center;
+    background-image: url('/wp-content/uploads/2025/07/g20e056230c3ce6b7db9a67e8ec74283d35b59cccea725d7b8de5a66d179d65c5bf6bbb1e90f4c6021e904f942c6d3840_1280-443600.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h2.titolo-hero {
+    color:var(--ast-global-color-5);
+}
+
+.intro-wrapper {
+    padding: 10% 20%;
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+.portfolio {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    @media (max-width: 767.98px){
+    	flex-direction: column;
+    }
+}
