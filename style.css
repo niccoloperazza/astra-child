@@ -100,3 +100,27 @@ span.swiper-pagination-bullet {
     color: #111;
     background: #007aff;
 }
+
+/**
+Form
+*/
+
+form#modulo-di-contatto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    label {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        span.label-text {
+            min-width: 25%;
+        }
+
+        input {
+            min-width: 75%;
+        }
+    }
+}

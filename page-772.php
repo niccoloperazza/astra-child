@@ -136,4 +136,36 @@ $immagine_hero = get_field('immagine_hero');
 	});
 </script>
 
+<div class="cf-wrapper">
+	<h3>Contact Form</h3>
+	<form action="<?php echo get_stylesheet_directory_uri();?>/helpers/process-form.php" method="post" id="modulo-di-contatto">
+		<label> <span class="label-text">Nome</span>
+			<input type="text" name="nome" id="nome">
+		</label>
+
+		<label> <span class="label-text">Email</span>
+			<input type="email" name="email" id="email">
+		</label>
+
+		<label> <span class="label-text">Numero di telefono</span>
+			<input type="tel" name="tel" id="tel">
+		</label>
+
+		<label> <span class="label-text">Data presunta del matrimonio</span>
+			<input type="date" name="data_matrimonio" id="data">
+		</label>
+
+		<label> <span class="label-text">Messaggio (optional)</span>
+			<input type="text" name="messaggio" id="messaggio">
+		</label>
+
+		<label><input type="checkbox" name="consenso" id="consenso" style="min-width:20px;"> Acconsento al trattamento dei dati inviati
+		</label>
+
+		<input type="submit" value="invia">
+
+	</form>
+
+</div>
+
 <?php get_footer(); ?>
