@@ -136,35 +136,49 @@ $immagine_hero = get_field('immagine_hero');
 	});
 </script>
 
-<div class="cf-wrapper">
-	<h3>Contact Form</h3>
-	<form action="<?php echo get_stylesheet_directory_uri();?>/helpers/process-form.php" method="post" id="modulo-di-contatto">
-		<label> <span class="label-text">Nome</span>
-			<input type="text" name="nome" id="nome">
-		</label>
+<div class="cf-wrapper" x-data="{ nome: '', email: '', tel: '', data_matrimonio: '', messaggio: ''  }">
+	<div class="form-wrap">
+		<h3>Contact Form</h3>
+		<form action="<?php echo get_stylesheet_directory_uri(); ?>/helpers/process-form.php" method="post" id="modulo-di-contatto">
+			<label> <span class="label-text">Nome</span>
+				<input type="text" name="nome" id="nome" x-model="nome">
+			</label>
 
-		<label> <span class="label-text">Email</span>
-			<input type="email" name="email" id="email">
-		</label>
+			
 
-		<label> <span class="label-text">Numero di telefono</span>
-			<input type="tel" name="tel" id="tel">
-		</label>
+			<label> <span class="label-text">Email</span>
+				<input type="email" name="email" id="email" x-model="email">
+			</label>
 
-		<label> <span class="label-text">Data presunta del matrimonio</span>
-			<input type="date" name="data_matrimonio" id="data">
-		</label>
+			<label> <span class="label-text">Numero di telefono</span>
+				<input type="tel" name="tel" id="tel" x-model="tel">
+			</label>
 
-		<label> <span class="label-text">Messaggio (optional)</span>
-			<input type="text" name="messaggio" id="messaggio">
-		</label>
+			<label> <span class="label-text">Data presunta del matrimonio</span>
+				<input type="date" name="data_matrimonio" id="data" x-model="data_matrimonio">
+			</label>
 
-		<label><input type="checkbox" name="consenso" id="consenso" style="min-width:20px;"> Acconsento al trattamento dei dati inviati
-		</label>
+			<label> <span class="label-text">Messaggio (optional)</span>
+				<input type="text" name="messaggio" id="messaggio" x-model="messaggio">
+			</label>
 
-		<input type="submit" value="invia">
+			<label><input type="checkbox" name="consenso" id="consenso" style="min-width:20px;"> Acconsento al trattamento dei dati inviati
+			</label>
 
-	</form>
+			<input type="submit" value="invia">
+
+		</form>
+	</div>
+
+	<div class="form-preview">
+		<h3>Cosa ci stai mandando:</h3>
+		Una richiesta da parte di: <span x-text="nome"></span>
+		dalla email: <span x-text="email"></span>
+		con allegato numero di tel: <span x-text="tel"></span>
+		per uno shooting fotografico relativo ad un matrimonio in data: <span x-text="data_matrimonio"></span>
+		con eventuali note: <span x-text="messaggio"></span>
+
+	</div>
 
 </div>
 

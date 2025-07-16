@@ -19,3 +19,10 @@ function astra_parent_theme_enqueue_styles() {
 		[ 'astra-style' ]
 	);
 }
+
+
+function add_calpine_js_to_head()
+{
+    echo '<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>';
+}
+add_action('wp_head', 'add_calpine_js_to_head');
